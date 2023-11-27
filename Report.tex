@@ -1,0 +1,728 @@
+\documentclass[10pt]{article}
+\input{styles/AESh.sty}
+\DeclareMathOperator{\Arctg}{Arctg}
+\makeatletter
+\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+	{-2ex \@plus -1ex \@minus -.5ex}%
+	{.3ex \@plus.2ex \@minus -.1ex}%
+	{\centering\normalfont\large\bfseries}}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+	{-3.5ex \@plus -1ex \@minus -.2ex}%
+	{2.3ex \@plus.2ex}%
+	{\centering\normalfont\Large\bfseries\textsc}}
+\renewcommand\subsubsection{\@startsection {subsubsection}{1}{\z@}%
+	{-3.5ex \@plus -1ex \@minus -.2ex}%
+	{2.3ex \@plus.2ex}%
+	{\centering\normalfont\normalsize\bfseries}}
+\makeatother
+\newcommand{\indexStyle}{\textstyle}
+\makeatletter
+\renewcommand\part{%
+	\if@noskipsec \leavevmode \fi
+	\par
+	\addvspace{4ex}%
+	\@afterindentfalse
+	\secdef\@part\@spart}
+\def\@part[#1]#2{%
+	\ifnum \c@secnumdepth >\m@ne
+	\refstepcounter{part}%
+	\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+	\else
+	\addcontentsline{toc}{part}{#1}%
+	\fi
+	{\parindent \z@ \raggedright
+		\interlinepenalty \@M
+		\normalfont
+		\ifnum \c@secnumdepth >\m@ne
+		\centering\Large\bfseries \partname\nobreakspace\thepart
+		\par\nobreak
+		\fi
+		\huge \bfseries #2%
+		\markboth{}{}\par}%
+	\nobreak
+	\vskip 3ex
+	\@afterheading}
+\def\@spart#1{%
+	{\parindent \z@ \raggedright
+		\interlinepenalty \@M
+		\normalfont
+		\huge \bfseries #1\par}%
+	\nobreak
+	\vskip 3ex
+	\@afterheading}
+\makeatother 
+
+\makeatletter
+\AtBeginDocument{\renewcommand{\tableofcontents}{
+		\@cfttocstart
+		\par
+		\begingroup
+		\parindent\z@ \parskip\cftparskip\centering
+		\@cftmaketoctitle
+		\if@cfttocbibind
+		\@cftdobibtoc
+		\fi
+		\@starttoc{toc}%
+		\endgroup
+		\@cfttocfinish}
+	\makeatother}
+
+\begin{document}
+	\setlength{\abovedisplayskip}{3pt plus 3pt minus 2pt}
+	\setlength{\abovedisplayshortskip}{3pt plus 2pt minus 3pt}
+	\setlength{\belowdisplayskip}{3pt plus 3pt minus 2pt}
+	\setlength{\belowdisplayshortskip}{3pt plus 2pt minus 3pt}
+	\setlength{\textfloatsep}{1em plus .4em minus .3em}
+	\setlength{\abovecaptionskip}{0.5em plus .4em minus .1em}
+	\setlength{\belowcaptionskip}{0.5em plus .4em minus .1em}
+	\begin{titlepage}
+		\thispagestyle{empty}
+		\begin{center}
+			\LARGE{\textsc{Skolkovo Institute of Science and Technology}}\\
+			
+			\normalsize Center of Material Technologies\\
+			\vspace{2cm}
+			\Large
+			Report on the course\\
+			\LARGE{\textbf{«Numerical Methods in Engineering and Science».}}\\[.4em]
+			\vspace{6cm}
+			\normalsize
+			\begin{flushright}
+				\begin{tabular}{rl}
+					\textbf{Executor:}\\
+					PhD Student A.S.~Kulikov 
+				\end{tabular}
+			\end{flushright}
+			\vspace{0.5cm}
+			\begin{flushright}
+				\begin{tabular}{rl}
+					\\
+					\textbf{Lecturer:}\\
+					Prof. O.V.~Vasilyev
+				\end{tabular}
+			\end{flushright}
+			\vfill
+			{Skolkovo\\
+				2023}
+		\end{center}
+	\end{titlepage}
+	\setcounter{page}{2}
+	
+	\tableofcontents
+	\newpage
+	
+	\part{Lagrange and Hermite interpolation}
+	
+	\par Lagrange and Hermite interpolants are considered for a set of functions and grid distributions in the interval [0, 1]. \\
+	Functions:
+	\begin{enumerate}
+		\item $ \frac{1}{1+x^2} $.
+		\item $ (x-\frac{1}{2})^2 sign(x-\frac{1}{2}) $.
+		\item $ |x-\frac{1}{2}| $.
+		\item $ \sqrt{1-x^2} $.
+	\end{enumerate}
+
+	Corresponding derivatives:
+	\begin{enumerate}
+		\item $ \frac{-2}{(1+x^2)^2} $.
+		\item $ 2(x-\frac{1}{2}) sign(x-\frac{1}{2}) $.
+		\item $ sign(x-\frac{1}{2}) $.
+		\item $ \frac{-x}{\sqrt{1-x^2}} $.
+	\end{enumerate}
+
+	Grid distributions:
+	\begin{enumerate}
+		\item Equispaced: $ x_i=\frac{i}{N}, \quad i=0, ..., N $.
+		\item Chebyshev: $ \frac{1}{2} - \frac{1}{2}cos(\frac{i}{N}\pi), \quad i=0, ..., N  $.
+		\item Asin: $ \frac{1}{2} + \frac{1}{\pi}sin^{-1}\left(\frac{2i}{N}-1\right), \quad i=0, ..., N  $.
+	\end{enumerate}
+
+where $N$ is the number of data points.
+	
+	\section{$ \frac{1}{1+x^2}  $}
+	\subsection{Lagrange interpolant}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F1_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F1_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F1_N10.png}}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F1_N20.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F1_N20.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F1_N20.png}} \\
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F1_N40.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F1_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F1_N40.png}} 
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F1_N80.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F1_N80.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F1_N80.png}} 
+		\end{minipage}%
+		\caption{Results of Lagrange interpolation for 10, 20, 40 and 80 data points. The function is pictured with blue, its interpolant with red. First colomn corresponds to Equispaced data point distribution, second to Chebyshev and third to Asin.}
+		%\label{ris:Area1-5}
+	\end{figure}
+\newpage
+	\subsection{Hermit interpolant}
+		\begin{figure}[H]
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F1_N5.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F1_N5.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F1_N5.png}}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F1_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F1_N10.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F1_N10.png}} \\
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F1_N20.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F1_N20.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F1_N20.png}} 
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F1_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F1_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F1_N40.png}} 
+		\end{minipage}%
+		\caption{Results of Hermit interpolation for 5, 10, 20 and 40 data points. The function is pictured with blue, its interpolant with red. First colomn corresponds to Equispaced data point distribution, second to Chebyshev and third to Asin.}
+		%\label{ris:Area1-5}
+	\end{figure}
+	\newpage
+	\subsection{Accuracy analysis}
+		\begin{figure}[H]
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_eq_err_F1.png}}
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Equispaced point distribution.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_eq_err_F1.png}} \\
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Equispaced point distribution.}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_cheb_err_F1.png}} \\
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Chebyshev point distribution.}
+		\end{minipage}%
+	\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_cheb_err_F1.png}} 
+				\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Chebyshev point distribution.}
+		\end{minipage}%
+		%\hfill
+		\vfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_asin_err_F1.png}} 
+				\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Asin point distribution.}
+		\end{minipage}%
+	\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_asin_err_F1.png}} 
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Asin point distribution.}
+		\end{minipage}%
+		%\hfill
+	\end{figure}
+	\newpage
+	
+	%%%%%%%%%%%%%%%2
+		\section{$ (x-\frac{1}{2})^2 sign(x-\frac{1}{2}) $}
+	\subsection{Lagrange interpolant}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F2_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F2_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F2_N10.png}}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F2_N20.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F2_N20.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F2_N20.png}} \\
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F2_N40.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F2_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F2_N40.png}} 
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F2_N80.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F2_N80.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F2_N80.png}} 
+		\end{minipage}%
+		\caption{Results of Lagrange interpolation for 10, 20, 40 and 80 data points. The function is pictured with blue, its interpolant with red. First colomn corresponds to Equispaced data point distribution, second to Chebyshev and third to Asin.}
+		%\label{ris:Area1-5}
+	\end{figure}
+	\newpage
+	\subsection{Hermit interpolant}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F2_N5.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F2_N5.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F2_N5.png}}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F2_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F2_N10.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F2_N10.png}} \\
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F2_N20.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F2_N20.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F2_N20.png}} 
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F2_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F2_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F2_N40.png}} 
+		\end{minipage}%
+		\caption{Results of Hermit interpolation for 5, 10, 20 and 40 data points. The function is pictured with blue, its interpolant with red. First colomn corresponds to Equispaced data point distribution, second to Chebyshev and third to Asin.}
+		%\label{ris:Area1-5}
+	\end{figure}
+	\newpage
+	\subsection{Accuracy analysis}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_eq_err_F2.png}}
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Equispaced point distribution.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_eq_err_F2.png}} \\
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Equispaced point distribution.}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_cheb_err_F2.png}} \\
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Chebyshev point distribution.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_cheb_err_F2.png}} 
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Chebyshev point distribution.}
+		\end{minipage}%
+		%\hfill
+		\vfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_asin_err_F2.png}} 
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Asin point distribution.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_asin_err_F2.png}} 
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Asin point distribution.}
+		\end{minipage}%
+		%\hfill
+	\end{figure}
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%3
+		\section{$ |x-\frac{1}{2}|  $}
+	\subsection{Lagrange interpolant}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F3_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F3_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F3_N10.png}}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F3_N20.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F3_N20.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F3_N20.png}} \\
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F3_N40.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F3_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F3_N40.png}} 
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F3_N80.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F3_N80.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F3_N80.png}} 
+		\end{minipage}%
+		\caption{Results of Lagrange interpolation for 10, 20, 40 and 80 data points. The function is pictured with blue, its interpolant with red. First colomn corresponds to Equispaced data point distribution, second to Chebyshev and third to Asin.}
+		%\label{ris:Area1-5}
+	\end{figure}
+	\newpage
+	\subsection{Hermit interpolant}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F3_N5.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F3_N5.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F3_N5.png}}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F3_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F3_N10.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F3_N10.png}} \\
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F3_N20.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F3_N20.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F3_N20.png}} 
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F3_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F3_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F3_N40.png}} 
+		\end{minipage}%
+		\caption{Results of Hermit interpolation for 5, 10, 20 and 40 data points. The function is pictured with blue, its interpolant with red. First colomn corresponds to Equispaced data point distribution, second to Chebyshev and third to Asin.}
+		%\label{ris:Area1-5}
+	\end{figure}
+	\newpage
+	\subsection{Accuracy analysis}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_eq_err_F3.png}}
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Equispaced point distribution.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_eq_err_F3.png}} \\
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Equispaced point distribution.}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_cheb_err_F3.png}} \\
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Chebyshev point distribution.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_cheb_err_F3.png}} 
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Chebyshev point distribution.}
+		\end{minipage}%
+		%\hfill
+		\vfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_asin_err_F3.png}} 
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Asin point distribution.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_asin_err_F3.png}} 
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Asin point distribution.}
+		\end{minipage}%
+		%\hfill
+	\end{figure}
+	\newpage
+	%%%%%%%%%%%%%%%%%%%%%%4
+		\section{$  \sqrt{1-x^2}   $}
+	\subsection{Lagrange interpolant}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F4_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F4_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F4_N10.png}}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F4_N20.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F4_N20.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F4_N20.png}} \\
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F4_N40.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F4_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F4_N40.png}} 
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Equi_F4_N80.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Cheb_F4_N80.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_Asin_F4_N80.png}} 
+		\end{minipage}%
+		\caption{Results of Lagrange interpolation for 10, 20, 40 and 80 data points. The function is pictured with blue, its interpolant with red. First colomn corresponds to Equispaced data point distribution, second to Chebyshev and third to Asin.}
+		%\label{ris:Area1-5}
+	\end{figure}
+	\newpage
+	\subsection{Hermit interpolant}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F4_N5.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F4_N5.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F4_N5.png}}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F4_N10.png}}
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F4_N10.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F4_N10.png}} \\
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F4_N20.png}} \\
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F4_N20.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F4_N20.png}} 
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Equi_F4_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Cheb_F4_N40.png}} 
+		\end{minipage}%
+		%\hfill
+		\begin{minipage}[h]{0.34\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_Asin_F4_N40.png}} 
+		\end{minipage}%
+		\caption{Results of Hermit interpolation for 5, 10, 20 and 40 data points. The function is pictured with blue, its interpolant with red. First colomn corresponds to Equispaced data point distribution, second to Chebyshev and third to Asin.}
+		%\label{ris:Area1-5}
+	\end{figure}
+	\newpage
+	\subsection{Accuracy analysis}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_eq_err_F4.png}}
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Equispaced point distribution.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_eq_err_F4.png}} \\
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Equispaced point distribution.}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_cheb_err_F4.png}} \\
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Chebyshev point distribution.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_cheb_err_F4.png}} 
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Chebyshev point distribution.}
+		\end{minipage}%
+		%\hfill
+		\vfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Lagr_asin_err_F4.png}} 
+			\caption{Dependence of error on the number of data\\ points for Lagrange interpolant and Asin point distribution.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{LagrangeHermit/Herm_asin_err_F4.png}} 
+			\caption{Dependence of error on the number of data\\ points for Hermit interpolant and Asin point distribution.}
+		\end{minipage}%
+		%\hfill
+	\end{figure}
+	\newpage
+\end{document}

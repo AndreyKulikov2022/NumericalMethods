@@ -9,7 +9,7 @@
 \usepackage[subfigure]{tocloft}  % Многоточие в оглавлении
 \usepackage{array,multicol,multirow,bigstrut}   % Чтобы можно было делать в таблице колонки фиксированной ширины, слитные ячейки, вставлять strut'ы.
 \usepackage{indentfirst}                        % Абзацный отступ везде
-\usepackage[british,russian]{babel}                     % Русские переносы, тире, типографика, самодержавие, духовность!
+\usepackage[british]{babel}                     % Русские переносы, тире, типографика, самодержавие, духовность!
 \usepackage[perpage]{footmisc}                  % Сброс счётчика сносок на каждой странице
 \usepackage[pdftex,unicode,bookmarks=true,bookmarksopen=true,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref} % Синие ссылки в PDF
 \usepackage{microtype}                          % Свешивающаяся пунктуация и подгонка белого пространства по правилу \pm 2 процента
@@ -183,7 +183,7 @@
 %%%%%%%%%%%%%%%%%%% Глобальные текстовые команды %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\ENGs}[1]{\foreignlanguage{british}{#1}} % Переключение правил переноса и прочих правил автооформления на английский язык действует на аргумент
 \newcommand{\ENG}{\selectlanguage{british}} % Глобальное переключение (если просто начать писать на другом язык, велика вероятность появления очень больших пробелов или помещения части слова за границу листа
-\newcommand{\RUS}{\selectlanguage{russian}}
+\newcommand{\RUS}{\selectlanguage{british}}
 \newcommand{\fnnsp}{\hspace{-0.4em}} % Знак сноски принято ставить до всех знаков препинания, кроме ! ? ...
 % А если есть возможность подвинуть низкий знак препинания под сноску, то для этого Андрей Викторович и придумал \fnnsp
 \let\myfootnote\footnote

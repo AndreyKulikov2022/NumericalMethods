@@ -1,4 +1,4 @@
-Export=false;
+Export=true;
 
 syms x;
 df = diff(1/((x-1)^2 + 0.002) + 1/((x-0.2)^2 + 0.005) - 5);
@@ -39,7 +39,49 @@ plot_error(N,err_simp);
 ax = gca;
 if Export exportgraphics(ax,['Integrals/','Simpson','.png']); end
 
+tols=[1e-1,1e-3,1e-5,1e-7];
+n=1000;
+err=zeros(length(tols),1);
+I_analitical=(1/sqrt(0.002)*atan(1/sqrt(0.002)))+(1/sqrt(0.005)*atan(0.8/sqrt(0.005)))+(1/sqrt(0.005)*atan(0.2/sqrt(0.005)))-5;
 
+number_of_calls=zeros(length(tols),1);
+
+
+for i=1:length(tols)
+
+    [I,distrib]=I_mid(0,1,tols(i));
+    figure
+    hold on
+    plot(linspace(0,1,n),f(linspace(0,1,n)));
+    plot(distrib,zeros(length(distrib),1),'o');
+    ax=gca;
+    if Export exportgraphics(ax,['Integrals/','Adaptive_',num2str(i),'.png']); end
+    err(i)=abs(I_analitical-I);
+    number_of_calls(i)=length(distrib);
+
+end
+
+plot_error(number_of_calls,tols);
+ax = gca;
+ylabel('tolerance','Interpreter','latex');
+if Export exportgraphics(ax,['Integrals/','Adaptive','.png']); end
+
+figure
+hold on
+[dens,xi] = ksdensity(distrib,'Support','positive');
+histogram(distrib,100);
+%plot(xi,dens);
+xi=xi(xi<1.01);
+fd2=zeros(length(xi),1);
+for i=1:length(xi)
+    fd2(i)=abs(eval(subs((diff(df)),x,xi(i))));
+end
+
+plot(xi,fd2/100);
+ylabel('$|\frac{d^2 f}{dx^2}|10^{-2}$','Interpreter','latex');
+xlabel('x');
+ax = gca;
+if Export exportgraphics(ax,['Integrals/','Adaptive_distrib','.png']); end
 
 
 function I = trapesoidal(x0,x1)
@@ -56,8 +98,22 @@ end
 
 
 function res=f(x)
-res = 1/((x-1)^2 + 0.002) + 1/((x-0.2)^2 + 0.005) - 5;
+res = 1./((x-1).^2 + 0.002) + 1./((x-0.2).^2 + 0.005) - 5;
 end 
+
+function [I,distrib]=I_mid(a,b,tol)
+I1=(b-a)*f((a+b)/2);
+I2=(b-a)/2*f((a+(a+b)/2)/2)+(b-a)/2*f(((a+b)/2+b)/2);
+if abs(I2-I1)<tol
+    distrib=(a+b)/2;
+    I = I1;
+else
+    [Ia,distrib_a]=I_mid(a,(a+b)/2,tol/2);
+    [Ib,distrib_b]=I_mid((a+b)/2,b,tol/2);
+    I=Ia+Ib;
+    distrib=[distrib_a, distrib_b];
+end
+end
 
 function plot_error(N,err)
     figure

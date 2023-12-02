@@ -578,6 +578,7 @@ where $N$ is the number of data points.
 		\end{minipage}%
 		%\hfill
 	\end{figure}
+%Some analysis
 	\newpage
 	%%%%%%%%%%%%%%%%%%%%%%4
 		\section{$  \sqrt{1-x^2}   $}
@@ -725,4 +726,58 @@ where $N$ is the number of data points.
 		%\hfill
 	\end{figure}
 	\newpage
+	\part{Cubic spline interpolation}
+	\section{Parametrization}
+	Cubic spline interpolation of an ellipse:
+	\begin{equation}
+			\label{ellipse}		
+			x^2 + \frac{y^2}{2}=1,
+	\end{equation}
+ is considered. Since the curve satisfying \ref{ellipse} can not be expressed in a form $y(x)$, we will work with its parametrization $(x(t),y(t))$. A set of data points is generated from:
+	\begin{equation}
+		\begin{cases}\ds
+			\label{ell_param}		
+			x=cos(t),\\
+			y=\sqrt{2}sin(t),
+		\end{cases}
+	\end{equation}
+	where $t \in [0,2\pi+\delta]$. The interpolation was performed for $N=$9, 13, 17, and 21 data points, extension of the interval $\delta = \frac{2\pi}{N}$ is introduced to apply periodic boundary conditions: $f''(N-1)=f(0), \quad f''(N)=f(1) $. 
+	\section{Results}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.5\linewidth}
+		\center{\includegraphics[width=1.0\linewidth]{CubicSpline/cubic_spline_N8.png}} \\
+		\caption{Interpolant for $N=9$.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{CubicSpline/cubic_spline_N12.png}} \\
+		\caption{Interpolant for $N=13$.}
+		\end{minipage}%
+		\vfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\center{\includegraphics[width=1.0\linewidth]{CubicSpline/cubic_spline_N16.png}} 
+		\caption{Interpolant for $N=17$.}
+		\end{minipage}%
+		\hspace{0.5cm}
+		%\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+				\center{\includegraphics[width=1.0\linewidth]{CubicSpline/cubic_spline_N20.png}} 
+			\caption{Interpolant for $N=21$.}
+		\end{minipage}%
+	\caption{Cubic spline interpolant is pictured with red and the actual function with blue.}
+	\end{figure}
+
+	\part{Finite difference and Pad\'e approximation}
+	\section{Finite difference}
+	
+	\section{Pad\'e approximation}
+	\part{Numeric integration}
+	\section{Trapezoidal Rule}
+	\section{Simpson's Rule}
+	\section{Trapezoidal Rule with End-Correction}
+	\section{Adaptive Quadrature}
+	\part{Numeric integration of improper integrals}
+	\section{Semi-Infinite intervals}
+	\section{Infinite intervals}
 \end{document}

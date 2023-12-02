@@ -1,4 +1,4 @@
-\babel@toc {russian}{}
+\babel@toc {british}{}
 \contentsline {part}{I\hspace {1em}Lagrange and Hermite interpolation}{3}{part.1}%
 \contentsline {section}{\numberline {1}$ \frac {1}{1+x^2} $}{4}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Lagrange interpolant}{4}{subsection.1.1}%
@@ -7,12 +7,26 @@
 \contentsline {section}{\numberline {2}$ (x-\frac {1}{2})^2 sign(x-\frac {1}{2}) $}{7}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Lagrange interpolant}{7}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Hermit interpolant}{8}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Accuracy analysis}{9}{subsection.2.3}%
-\contentsline {section}{\numberline {3}$ |x-\frac {1}{2}| $}{10}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Lagrange interpolant}{10}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Hermit interpolant}{11}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Accuracy analysis}{12}{subsection.3.3}%
-\contentsline {section}{\numberline {4}$ \sqrt {1-x^2} $}{13}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Lagrange interpolant}{13}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Hermit interpolant}{14}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Accuracy analysis}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {2.3}Accuracy analysis}{10}{subsection.2.3}%
+\contentsline {section}{\numberline {3}$ |x-\frac {1}{2}| $}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Lagrange interpolant}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Hermit interpolant}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Accuracy analysis}{14}{subsection.3.3}%
+\contentsline {section}{\numberline {4}$ \sqrt {1-x^2} $}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Lagrange interpolant}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Hermit interpolant}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Accuracy analysis}{17}{subsection.4.3}%
+\contentsline {part}{II\hspace {1em}Cubic spline interpolation}{18}{part.2}%
+\contentsline {section}{\numberline {5}Parametrization}{18}{section.5}%
+\contentsline {section}{\numberline {6}Results}{18}{section.6}%
+\contentsline {part}{III\hspace {1em}Finite difference and Pad\'e approximation}{19}{part.3}%
+\contentsline {section}{\numberline {7}Finite difference}{19}{section.7}%
+\contentsline {section}{\numberline {8}Pad\'e approximation}{19}{section.8}%
+\contentsline {part}{IV\hspace {1em}Numeric integration}{19}{part.4}%
+\contentsline {section}{\numberline {9}Trapezoidal Rule}{19}{section.9}%
+\contentsline {section}{\numberline {10}Simpson's Rule}{19}{section.10}%
+\contentsline {section}{\numberline {11}Trapezoidal Rule with End-Correction}{19}{section.11}%
+\contentsline {section}{\numberline {12}Adaptive Quadrature}{19}{section.12}%
+\contentsline {part}{V\hspace {1em}Numeric integration of improper integrals}{19}{part.5}%
+\contentsline {section}{\numberline {13}Semi-Infinite intervals}{19}{section.13}%
+\contentsline {section}{\numberline {14}Infinite intervals}{19}{section.14}%

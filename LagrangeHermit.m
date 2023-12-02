@@ -72,7 +72,7 @@ for i_f=1:length(Fs)
     err_cheb=zeros(1,length(N));
     err_asin=zeros(1,length(N));
     for iter=1:length(N)
-        X=gen_eq(N(iter));
+        X=gen_eq(N(iter));       
         Y=zeros(1,N(iter)+1);
         for i=1:N(iter)+1
             Y(i)=Fs{i_f}(X(i));
@@ -151,6 +151,9 @@ for i_f=1:length(Fs)
     err_asin=zeros(1,length(N));
     for iter=1:length(N)
         X=gen_eq(N(iter));
+        if i_f==4
+            X(end)=1.0001;
+        end
         Y=zeros(1,N(iter)+1);
         dY=zeros(1,N(iter)+1);
         for i=1:N(iter)+1
@@ -173,6 +176,9 @@ for i_f=1:length(Fs)
         if Export exportgraphics(ax,['LagrangeHermit/','Herm_Equi','_F',num2str(i_f),'_N',num2str(N(iter)),'.png']); end
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         X=gen_cheb(N(iter));
+        if i_f==4
+            X(end)=1.0001;
+        end
         Y=zeros(1,N(iter)+1);
         dY=zeros(1,N(iter)+1);
         for i=1:N(iter)+1
@@ -194,6 +200,9 @@ for i_f=1:length(Fs)
         if Export exportgraphics(ax,['LagrangeHermit/','Herm_Cheb','_F',num2str(i_f),'_N',num2str(N(iter)),'.png']);end
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         X=gen_asin(N(iter));
+        if i_f==4
+            X(end)=1.0001;
+        end
         Y=zeros(1,N(iter)+1);
         dY=zeros(1,N(iter)+1);
         for i=1:N(iter)+1
@@ -290,8 +299,10 @@ end
 function plot_error(N,err)
     figure
     hold on
-    ord = polyfit(log(N), log(err), 1);
-    plot(N,err);
+    ord = polyfit(log(N(1:2)), log(err(1:2)), 1);
+    plot(N,err,'b');
+    plot(N(1:2),(N(1:2).^ord(1)),'r');
+    text(N(2),2*N(2).^ord(1),['~$\frac{1}{N^{',num2str(-ord(1)),'}}$'],'Interpreter','latex','Color','r');
     xlabel('Number of data points.');
     ylabel('Error');
     set(gca, 'XScale', 'log')

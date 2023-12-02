@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.10)  26 NOV 2023 23:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.10)  1 DEC 2023 22:31
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -759,14 +759,7 @@ Package babel Info: \l@australian = using hyphenrules for ukenglish
 (babel)             (\language73) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 (babel)             (\language73) on input line 108.
-))
-(C:\Users\mail4\AppData\Local\Programs\MiKTeX\tex/latex/babel-russian\russianb.
-ldf
-File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
-Language: russian 2020/09/09 1.3k Russian support for the Babel system
-Package babel Info: Making " an active character on input line 124.
-Package babel Info: Default for \cyrdash is provided on input line 163.
-))
+)))
 (C:\Users\mail4\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks34
@@ -847,7 +840,6 @@ File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `unicode' set `true' on input line 3167.
 Package hyperref Info: Option `unicode' set `true' on input line 4073.
 Package hyperref Info: Option `bookmarks' set `true' on input line 4073.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 4073.
@@ -1136,10 +1128,6 @@ LaTeX Info: Redefining \today on input line 736.
 
 (C:\Users\mail4\AppData\Local\Programs\MiKTeX\tex/latex/datetime\dt-british.def
 File: dt-british.def 2013/09/10
-)
-(C:\Users\mail4\AppData\Local\Programs\MiKTeX\tex/latex/datetime\dt-russian.def
-File: dt-russian.def 2013/09/10
-LaTeX Info: Redefining \daterussian on input line 64.
 )
 \dt@a=\toks44
 \dt@b=\toks45
@@ -1673,7 +1661,36 @@ tex.def
 File: l3backend-pdftex.def 2021-03-02 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count371
 \l__pdf_internal_box=\box119
-) (Report.aux)
+) (Report.aux
+(C:\Users\mail4\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/ru\babel
+-russian.tex
+Package babel Info: Importing basic data for russian
+(babel)             from babel-ru.ini. Reported on input line 11.
+)
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \babel@aux{russian}{}
+                          
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\bbl@vforeach ...cmd ##1{#2}\bbl@fornext #1,\@nil 
+                                                  ,
+l.22 \babel@aux{russian}{}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
 \openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
@@ -1693,8 +1710,7 @@ LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Checking defaults for X2/cmr/m/n on input line 71.
 LaTeX Font Info:    Trying to load font information for X2+cmr on input line 71
 .
-
-(C:\Users\mail4\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\x2cmr.fd
+ (C:\Users\mail4\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\x2cmr.fd
 File: x2cmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 LaTeX Font Info:    ... okay on input line 71.
@@ -1704,7 +1720,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
-LaTeX Info: Redefining \th on input line 71.
 Package hyperref Info: Link coloring ON on input line 71.
 
 (C:\Users\mail4\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
@@ -1811,7 +1826,10 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into
 your preamble.
  on input line 71.
 
-<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+[1
+
+{C:/Users/mail4/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]<<ot1.cmap>><<om
+l.cmap>><<oms.cmap>><<omx.cmap>>
 LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
 
 
@@ -1835,15 +1853,16 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 92
 
 (C:\Users\mail4\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-[1
-
-{C:/Users/mail4/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (Report.toc)
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.109 	\end{titlepage}
+                       [1] (Report.toc)
 \tf@toc=\write5
 \openout5 = `Report.toc'.
 
-
-[2]
+ [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
@@ -1868,19 +1887,19 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
 
-<LagrangeHermit/Lagr_Equi_F1_N10.png, id=119, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F1_N10.png, id=191, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F1_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F1_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F1_N10.png  used on input lin
 e 147.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Cheb_F1_N10.png, id=120, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F1_N10.png, id=192, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F1_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F1_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F1_N10.png  used on input lin
 e 151.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Asin_F1_N10.png, id=121, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F1_N10.png, id=193, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F1_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F1_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F1_N10.png  used on input lin
@@ -1891,19 +1910,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 146--157
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F1_N20.png, id=122, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F1_N20.png, id=194, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F1_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F1_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F1_N20.png  used on input lin
 e 159.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Cheb_F1_N20.png, id=123, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F1_N20.png, id=195, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F1_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F1_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F1_N20.png  used on input lin
 e 163.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Asin_F1_N20.png, id=124, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F1_N20.png, id=196, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F1_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F1_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F1_N20.png  used on input lin
@@ -1914,19 +1933,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 158--169
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F1_N40.png, id=125, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F1_N40.png, id=197, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F1_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F1_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F1_N40.png  used on input lin
 e 171.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Cheb_F1_N40.png, id=126, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F1_N40.png, id=198, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F1_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F1_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F1_N40.png  used on input lin
 e 175.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Asin_F1_N40.png, id=127, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F1_N40.png, id=199, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F1_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F1_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F1_N40.png  used on input lin
@@ -1937,19 +1956,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 170--181
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F1_N80.png, id=128, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F1_N80.png, id=200, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F1_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F1_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F1_N80.png  used on input lin
 e 183.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Cheb_F1_N80.png, id=129, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F1_N80.png, id=201, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F1_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F1_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F1_N80.png  used on input lin
 e 187.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Asin_F1_N80.png, id=130, 369.0588pt x 317.988pt>
+<LagrangeHermit/Lagr_Asin_F1_N80.png, id=202, 369.0588pt x 317.988pt>
 File: LagrangeHermit/Lagr_Asin_F1_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F1_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F1_N80.png  used on input lin
@@ -1972,19 +1991,19 @@ angeHermit/Lagr_Equi_F1_N40.png (PNG copy)> <./LagrangeHermit/Lagr_Cheb_F1_N40.
 png (PNG copy)> <./LagrangeHermit/Lagr_Asin_F1_N40.png (PNG copy)> <./LagrangeH
 ermit/Lagr_Equi_F1_N80.png (PNG copy)> <./LagrangeHermit/Lagr_Cheb_F1_N80.png (
 PNG copy)> <./LagrangeHermit/Lagr_Asin_F1_N80.png (PNG copy)>]
-<LagrangeHermit/Herm_Equi_F1_N5.png, id=156, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F1_N5.png, id=229, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F1_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F1_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F1_N5.png  used on input line
  200.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Cheb_F1_N5.png, id=157, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F1_N5.png, id=230, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F1_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F1_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F1_N5.png  used on input line
  204.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Asin_F1_N5.png, id=158, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F1_N5.png, id=231, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F1_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F1_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F1_N5.png  used on input line
@@ -1995,19 +2014,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 199--210
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F1_N10.png, id=159, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F1_N10.png, id=232, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F1_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F1_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F1_N10.png  used on input lin
 e 212.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Cheb_F1_N10.png, id=160, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F1_N10.png, id=233, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F1_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F1_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F1_N10.png  used on input lin
 e 216.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Asin_F1_N10.png, id=161, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F1_N10.png, id=234, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F1_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F1_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F1_N10.png  used on input lin
@@ -2018,19 +2037,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 211--222
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F1_N20.png, id=162, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F1_N20.png, id=235, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F1_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F1_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F1_N20.png  used on input lin
 e 224.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Cheb_F1_N20.png, id=163, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F1_N20.png, id=236, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F1_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F1_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F1_N20.png  used on input lin
 e 228.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Asin_F1_N20.png, id=164, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F1_N20.png, id=237, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F1_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F1_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F1_N20.png  used on input lin
@@ -2041,19 +2060,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 223--234
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F1_N40.png, id=165, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F1_N40.png, id=238, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F1_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F1_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F1_N40.png  used on input lin
 e 236.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Cheb_F1_N40.png, id=166, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F1_N40.png, id=239, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F1_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F1_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F1_N40.png  used on input lin
 e 240.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Asin_F1_N40.png, id=167, 369.0588pt x 317.988pt>
+<LagrangeHermit/Herm_Asin_F1_N40.png, id=240, 369.0588pt x 317.988pt>
 File: LagrangeHermit/Herm_Asin_F1_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F1_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F1_N40.png  used on input lin
@@ -2072,13 +2091,13 @@ eHermit/Herm_Equi_F1_N20.png (PNG copy)> <./LagrangeHermit/Herm_Cheb_F1_N20.png
  (PNG copy)> <./LagrangeHermit/Herm_Asin_F1_N20.png (PNG copy)> <./LagrangeHerm
 it/Herm_Equi_F1_N40.png (PNG copy)> <./LagrangeHermit/Herm_Cheb_F1_N40.png (PNG
  copy)> <./LagrangeHermit/Herm_Asin_F1_N40.png (PNG copy)>]
-<LagrangeHermit/Lagr_eq_err_F1.png, id=173, 375.804pt x 296.7888pt>
+<LagrangeHermit/Lagr_eq_err_F1.png, id=246, 375.804pt x 296.7888pt>
 File: LagrangeHermit/Lagr_eq_err_F1.png Graphic file (type png)
 <use LagrangeHermit/Lagr_eq_err_F1.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_eq_err_F1.png  used on input line 
 253.
 (pdftex.def)             Requested size: 263.188pt x 207.85942pt.
-<LagrangeHermit/Herm_eq_err_F1.png, id=174, 375.804pt x 296.307pt>
+<LagrangeHermit/Herm_eq_err_F1.png, id=247, 375.804pt x 296.307pt>
 File: LagrangeHermit/Herm_eq_err_F1.png Graphic file (type png)
 <use LagrangeHermit/Herm_eq_err_F1.png>
 Package pdftex.def Info: LagrangeHermit/Herm_eq_err_F1.png  used on input line 
@@ -2089,30 +2108,30 @@ Overfull \hbox (16.44803pt too wide) in paragraph at lines 252--262
 []$[]$  $[]$ 
  []
 
-<LagrangeHermit/Lagr_cheb_err_F1.png, id=175, 375.804pt x 296.7888pt>
+<LagrangeHermit/Lagr_cheb_err_F1.png, id=248, 375.804pt x 296.307pt>
 File: LagrangeHermit/Lagr_cheb_err_F1.png Graphic file (type png)
 <use LagrangeHermit/Lagr_cheb_err_F1.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_cheb_err_F1.png  used on input lin
 e 264.
-(pdftex.def)             Requested size: 263.188pt x 207.85942pt.
-<LagrangeHermit/Herm_cheb_err_F1.png, id=176, 375.804pt x 296.7888pt>
+(pdftex.def)             Requested size: 263.188pt x 207.52199pt.
+<LagrangeHermit/Herm_cheb_err_F1.png, id=249, 375.804pt x 296.307pt>
 File: LagrangeHermit/Herm_cheb_err_F1.png Graphic file (type png)
 <use LagrangeHermit/Herm_cheb_err_F1.png>
 Package pdftex.def Info: LagrangeHermit/Herm_cheb_err_F1.png  used on input lin
 e 270.
-(pdftex.def)             Requested size: 263.188pt x 207.85942pt.
+(pdftex.def)             Requested size: 263.188pt x 207.52199pt.
 
 Overfull \hbox (16.44803pt too wide) in paragraph at lines 263--274
 []$[]$  $[]$ 
  []
 
-<LagrangeHermit/Lagr_asin_err_F1.png, id=177, 375.804pt x 296.7888pt>
+<LagrangeHermit/Lagr_asin_err_F1.png, id=250, 375.804pt x 296.7888pt>
 File: LagrangeHermit/Lagr_asin_err_F1.png Graphic file (type png)
 <use LagrangeHermit/Lagr_asin_err_F1.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_asin_err_F1.png  used on input lin
 e 276.
 (pdftex.def)             Requested size: 263.188pt x 207.85942pt.
-<LagrangeHermit/Herm_asin_err_F1.png, id=178, 375.804pt x 296.7888pt>
+<LagrangeHermit/Herm_asin_err_F1.png, id=251, 375.804pt x 296.7888pt>
 File: LagrangeHermit/Herm_asin_err_F1.png Graphic file (type png)
 <use LagrangeHermit/Herm_asin_err_F1.png>
 Package pdftex.def Info: LagrangeHermit/Herm_asin_err_F1.png  used on input lin
@@ -2163,19 +2182,19 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 290.
 
-<LagrangeHermit/Lagr_Equi_F2_N10.png, id=184, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F2_N10.png, id=258, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F2_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F2_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F2_N10.png  used on input lin
 e 294.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Lagr_Cheb_F2_N10.png, id=185, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F2_N10.png, id=259, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F2_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F2_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F2_N10.png  used on input lin
 e 298.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Lagr_Asin_F2_N10.png, id=186, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F2_N10.png, id=260, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F2_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F2_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F2_N10.png  used on input lin
@@ -2186,19 +2205,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 293--304
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F2_N20.png, id=187, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F2_N20.png, id=261, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F2_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F2_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F2_N20.png  used on input lin
 e 306.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Lagr_Cheb_F2_N20.png, id=188, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F2_N20.png, id=262, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F2_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F2_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F2_N20.png  used on input lin
 e 310.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Lagr_Asin_F2_N20.png, id=189, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F2_N20.png, id=263, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F2_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F2_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F2_N20.png  used on input lin
@@ -2209,19 +2228,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 305--316
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F2_N40.png, id=190, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F2_N40.png, id=264, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F2_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F2_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F2_N40.png  used on input lin
 e 318.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Lagr_Cheb_F2_N40.png, id=191, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F2_N40.png, id=265, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F2_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F2_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F2_N40.png  used on input lin
 e 322.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Lagr_Asin_F2_N40.png, id=192, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F2_N40.png, id=266, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F2_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F2_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F2_N40.png  used on input lin
@@ -2232,19 +2251,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 317--328
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F2_N80.png, id=193, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F2_N80.png, id=267, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F2_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F2_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F2_N80.png  used on input lin
 e 330.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Lagr_Cheb_F2_N80.png, id=194, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F2_N80.png, id=268, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F2_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F2_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F2_N80.png  used on input lin
 e 334.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Lagr_Asin_F2_N80.png, id=195, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F2_N80.png, id=269, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F2_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F2_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F2_N80.png  used on input lin
@@ -2263,19 +2282,19 @@ angeHermit/Lagr_Equi_F2_N40.png (PNG copy)> <./LagrangeHermit/Lagr_Cheb_F2_N40.
 png (PNG copy)> <./LagrangeHermit/Lagr_Asin_F2_N40.png (PNG copy)> <./LagrangeH
 ermit/Lagr_Equi_F2_N80.png (PNG copy)> <./LagrangeHermit/Lagr_Cheb_F2_N80.png (
 PNG copy)> <./LagrangeHermit/Lagr_Asin_F2_N80.png (PNG copy)>]
-<LagrangeHermit/Herm_Equi_F2_N5.png, id=204, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F2_N5.png, id=277, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F2_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F2_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F2_N5.png  used on input line
  347.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Herm_Cheb_F2_N5.png, id=205, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F2_N5.png, id=278, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F2_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F2_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F2_N5.png  used on input line
  351.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Herm_Asin_F2_N5.png, id=206, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F2_N5.png, id=279, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F2_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F2_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F2_N5.png  used on input line
@@ -2286,19 +2305,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 346--357
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F2_N10.png, id=207, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F2_N10.png, id=280, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F2_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F2_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F2_N10.png  used on input lin
 e 359.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Herm_Cheb_F2_N10.png, id=208, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F2_N10.png, id=281, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F2_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F2_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F2_N10.png  used on input lin
 e 363.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Herm_Asin_F2_N10.png, id=209, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F2_N10.png, id=282, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F2_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F2_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F2_N10.png  used on input lin
@@ -2309,19 +2328,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 358--369
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F2_N20.png, id=210, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F2_N20.png, id=283, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F2_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F2_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F2_N20.png  used on input lin
 e 371.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Herm_Cheb_F2_N20.png, id=211, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F2_N20.png, id=284, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F2_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F2_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F2_N20.png  used on input lin
 e 375.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Herm_Asin_F2_N20.png, id=212, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F2_N20.png, id=285, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F2_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F2_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F2_N20.png  used on input lin
@@ -2332,19 +2351,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 370--381
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F2_N40.png, id=213, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F2_N40.png, id=286, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F2_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F2_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F2_N40.png  used on input lin
 e 383.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Herm_Cheb_F2_N40.png, id=214, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F2_N40.png, id=287, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F2_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F2_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F2_N40.png  used on input lin
 e 387.
 (pdftex.def)             Requested size: 178.96591pt x 139.6102pt.
-<LagrangeHermit/Herm_Asin_F2_N40.png, id=215, 372.4314pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F2_N40.png, id=288, 372.4314pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F2_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F2_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F2_N40.png  used on input lin
@@ -2363,13 +2382,13 @@ eHermit/Herm_Equi_F2_N20.png (PNG copy)> <./LagrangeHermit/Herm_Cheb_F2_N20.png
  (PNG copy)> <./LagrangeHermit/Herm_Asin_F2_N20.png (PNG copy)> <./LagrangeHerm
 it/Herm_Equi_F2_N40.png (PNG copy)> <./LagrangeHermit/Herm_Cheb_F2_N40.png (PNG
  copy)> <./LagrangeHermit/Herm_Asin_F2_N40.png (PNG copy)>]
-<LagrangeHermit/Lagr_eq_err_F2.png, id=221, 372.9132pt x 296.7888pt>
+<LagrangeHermit/Lagr_eq_err_F2.png, id=294, 372.9132pt x 296.7888pt>
 File: LagrangeHermit/Lagr_eq_err_F2.png Graphic file (type png)
 <use LagrangeHermit/Lagr_eq_err_F2.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_eq_err_F2.png  used on input line 
 400.
 (pdftex.def)             Requested size: 263.188pt x 209.46255pt.
-<LagrangeHermit/Herm_eq_err_F2.png, id=222, 372.9132pt x 294.8616pt>
+<LagrangeHermit/Herm_eq_err_F2.png, id=295, 372.9132pt x 294.8616pt>
 File: LagrangeHermit/Herm_eq_err_F2.png Graphic file (type png)
 <use LagrangeHermit/Herm_eq_err_F2.png>
 Package pdftex.def Info: LagrangeHermit/Herm_eq_err_F2.png  used on input line 
@@ -2380,30 +2399,30 @@ Overfull \hbox (16.44803pt too wide) in paragraph at lines 399--409
 []$[]$  $[]$ 
  []
 
-<LagrangeHermit/Lagr_cheb_err_F2.png, id=223, 370.986pt x 291.489pt>
+<LagrangeHermit/Lagr_cheb_err_F2.png, id=296, 370.986pt x 296.7888pt>
 File: LagrangeHermit/Lagr_cheb_err_F2.png Graphic file (type png)
 <use LagrangeHermit/Lagr_cheb_err_F2.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_cheb_err_F2.png  used on input lin
 e 411.
-(pdftex.def)             Requested size: 263.188pt x 206.79851pt.
-<LagrangeHermit/Herm_cheb_err_F2.png, id=224, 370.986pt x 291.489pt>
+(pdftex.def)             Requested size: 263.188pt x 210.55849pt.
+<LagrangeHermit/Herm_cheb_err_F2.png, id=297, 370.986pt x 311.7246pt>
 File: LagrangeHermit/Herm_cheb_err_F2.png Graphic file (type png)
 <use LagrangeHermit/Herm_cheb_err_F2.png>
 Package pdftex.def Info: LagrangeHermit/Herm_cheb_err_F2.png  used on input lin
 e 417.
-(pdftex.def)             Requested size: 263.188pt x 206.79851pt.
+(pdftex.def)             Requested size: 263.188pt x 221.15477pt.
 
 Overfull \hbox (16.44803pt too wide) in paragraph at lines 410--421
 []$[]$  $[]$ 
  []
 
-<LagrangeHermit/Lagr_asin_err_F2.png, id=225, 372.9132pt x 296.7888pt>
+<LagrangeHermit/Lagr_asin_err_F2.png, id=298, 372.9132pt x 296.7888pt>
 File: LagrangeHermit/Lagr_asin_err_F2.png Graphic file (type png)
 <use LagrangeHermit/Lagr_asin_err_F2.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_asin_err_F2.png  used on input lin
 e 423.
 (pdftex.def)             Requested size: 263.188pt x 209.46255pt.
-<LagrangeHermit/Herm_asin_err_F2.png, id=226, 372.9132pt x 296.7888pt>
+<LagrangeHermit/Herm_asin_err_F2.png, id=299, 372.9132pt x 296.7888pt>
 File: LagrangeHermit/Herm_asin_err_F2.png Graphic file (type png)
 <use LagrangeHermit/Herm_asin_err_F2.png>
 Package pdftex.def Info: LagrangeHermit/Herm_asin_err_F2.png  used on input lin
@@ -2414,10 +2433,17 @@ Overfull \hbox (16.44803pt too wide) in paragraph at lines 422--433
 []$[]$  $[]$ 
  []
 
-[9 <./LagrangeHermit/Lagr_eq_err_F2.png (PNG copy)> <./LagrangeHermit/Herm_eq_e
-rr_F2.png (PNG copy)> <./LagrangeHermit/Lagr_cheb_err_F2.png (PNG copy)> <./Lag
-rangeHermit/Herm_cheb_err_F2.png (PNG copy)> <./LagrangeHermit/Lagr_asin_err_F2
-.png (PNG copy)> <./LagrangeHermit/Herm_asin_err_F2.png (PNG copy)>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+Overfull \vbox (0.43332pt too high) has occurred while \output is active []
+
+
+[10 <./LagrangeHermit/Lagr_eq_err_F2.png (PNG copy)> <./LagrangeHermit/Herm_eq_
+err_F2.png (PNG copy)> <./LagrangeHermit/Lagr_cheb_err_F2.png (PNG copy)> <./La
+grangeHermit/Herm_cheb_err_F2.png (PNG copy)> <./LagrangeHermit/Lagr_asin_err_F
+2.png (PNG copy)> <./LagrangeHermit/Herm_asin_err_F2.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 437.
@@ -2438,19 +2464,19 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 437.
 
-<LagrangeHermit/Lagr_Equi_F3_N10.png, id=232, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F3_N10.png, id=309, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F3_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F3_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F3_N10.png  used on input lin
 e 441.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Cheb_F3_N10.png, id=233, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F3_N10.png, id=310, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F3_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F3_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F3_N10.png  used on input lin
 e 445.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Asin_F3_N10.png, id=234, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F3_N10.png, id=311, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F3_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F3_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F3_N10.png  used on input lin
@@ -2461,19 +2487,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 440--451
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F3_N20.png, id=235, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F3_N20.png, id=312, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F3_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F3_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F3_N20.png  used on input lin
 e 453.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Cheb_F3_N20.png, id=236, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F3_N20.png, id=313, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F3_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F3_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F3_N20.png  used on input lin
 e 457.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Asin_F3_N20.png, id=237, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F3_N20.png, id=314, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F3_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F3_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F3_N20.png  used on input lin
@@ -2484,19 +2510,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 452--463
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F3_N40.png, id=238, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F3_N40.png, id=315, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F3_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F3_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F3_N40.png  used on input lin
 e 465.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Cheb_F3_N40.png, id=239, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F3_N40.png, id=316, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F3_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F3_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F3_N40.png  used on input lin
 e 469.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Asin_F3_N40.png, id=240, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F3_N40.png, id=317, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F3_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F3_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F3_N40.png  used on input lin
@@ -2507,19 +2533,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 464--475
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F3_N80.png, id=241, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F3_N80.png, id=318, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F3_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F3_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F3_N80.png  used on input lin
 e 477.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Cheb_F3_N80.png, id=242, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F3_N80.png, id=319, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F3_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F3_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F3_N80.png  used on input lin
 e 481.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Lagr_Asin_F3_N80.png, id=243, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F3_N80.png, id=320, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F3_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F3_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F3_N80.png  used on input lin
@@ -2530,7 +2556,7 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 476--487
 []$[]$$[]$$[]$ 
  []
 
-[10 <./LagrangeHermit/Lagr_Equi_F3_N10.png (PNG copy)> <./LagrangeHermit/Lagr_C
+[11 <./LagrangeHermit/Lagr_Equi_F3_N10.png (PNG copy)> <./LagrangeHermit/Lagr_C
 heb_F3_N10.png (PNG copy)> <./LagrangeHermit/Lagr_Asin_F3_N10.png (PNG copy)> <
 ./LagrangeHermit/Lagr_Equi_F3_N20.png (PNG copy)> <./LagrangeHermit/Lagr_Cheb_F
 3_N20.png (PNG copy)> <./LagrangeHermit/Lagr_Asin_F3_N20.png (PNG copy)> <./Lag
@@ -2538,19 +2564,19 @@ rangeHermit/Lagr_Equi_F3_N40.png (PNG copy)> <./LagrangeHermit/Lagr_Cheb_F3_N40
 .png (PNG copy)> <./LagrangeHermit/Lagr_Asin_F3_N40.png (PNG copy)> <./Lagrange
 Hermit/Lagr_Equi_F3_N80.png (PNG copy)> <./LagrangeHermit/Lagr_Cheb_F3_N80.png 
 (PNG copy)> <./LagrangeHermit/Lagr_Asin_F3_N80.png (PNG copy)>]
-<LagrangeHermit/Herm_Equi_F3_N5.png, id=249, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F3_N5.png, id=326, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F3_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F3_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F3_N5.png  used on input line
  494.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Cheb_F3_N5.png, id=250, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F3_N5.png, id=327, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F3_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F3_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F3_N5.png  used on input line
  498.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Asin_F3_N5.png, id=251, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F3_N5.png, id=328, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F3_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F3_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F3_N5.png  used on input line
@@ -2561,19 +2587,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 493--504
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F3_N10.png, id=252, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F3_N10.png, id=329, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F3_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F3_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F3_N10.png  used on input lin
 e 506.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Cheb_F3_N10.png, id=253, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F3_N10.png, id=330, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F3_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F3_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F3_N10.png  used on input lin
 e 510.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Asin_F3_N10.png, id=254, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F3_N10.png, id=331, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F3_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F3_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F3_N10.png  used on input lin
@@ -2584,19 +2610,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 505--516
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F3_N20.png, id=255, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F3_N20.png, id=332, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F3_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F3_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F3_N20.png  used on input lin
 e 518.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Cheb_F3_N20.png, id=256, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F3_N20.png, id=333, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F3_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F3_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F3_N20.png  used on input lin
 e 522.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Asin_F3_N20.png, id=257, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F3_N20.png, id=334, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F3_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F3_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F3_N20.png  used on input lin
@@ -2607,19 +2633,19 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 517--528
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F3_N40.png, id=258, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F3_N40.png, id=335, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F3_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F3_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F3_N40.png  used on input lin
 e 530.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Cheb_F3_N40.png, id=259, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F3_N40.png, id=336, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F3_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F3_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F3_N40.png  used on input lin
 e 534.
 (pdftex.def)             Requested size: 178.96591pt x 140.88692pt.
-<LagrangeHermit/Herm_Asin_F3_N40.png, id=260, 369.0588pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F3_N40.png, id=337, 369.0588pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F3_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F3_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F3_N40.png  used on input lin
@@ -2630,7 +2656,7 @@ Overfull \hbox (10.52171pt too wide) in paragraph at lines 529--540
 []$[]$$[]$$[]$ 
  []
 
-[11 <./LagrangeHermit/Herm_Equi_F3_N5.png (PNG copy)> <./LagrangeHermit/Herm_Ch
+[12 <./LagrangeHermit/Herm_Equi_F3_N5.png (PNG copy)> <./LagrangeHermit/Herm_Ch
 eb_F3_N5.png (PNG copy)> <./LagrangeHermit/Herm_Asin_F3_N5.png (PNG copy)> <./L
 agrangeHermit/Herm_Equi_F3_N10.png (PNG copy)> <./LagrangeHermit/Herm_Cheb_F3_N
 10.png (PNG copy)> <./LagrangeHermit/Herm_Asin_F3_N10.png (PNG copy)> <./Lagran
@@ -2638,13 +2664,13 @@ geHermit/Herm_Equi_F3_N20.png (PNG copy)> <./LagrangeHermit/Herm_Cheb_F3_N20.pn
 g (PNG copy)> <./LagrangeHermit/Herm_Asin_F3_N20.png (PNG copy)> <./LagrangeHer
 mit/Herm_Equi_F3_N40.png (PNG copy)> <./LagrangeHermit/Herm_Cheb_F3_N40.png (PN
 G copy)> <./LagrangeHermit/Herm_Asin_F3_N40.png (PNG copy)>]
-<LagrangeHermit/Lagr_eq_err_F3.png, id=266, 372.9132pt x 296.7888pt>
+<LagrangeHermit/Lagr_eq_err_F3.png, id=344, 372.9132pt x 296.7888pt>
 File: LagrangeHermit/Lagr_eq_err_F3.png Graphic file (type png)
 <use LagrangeHermit/Lagr_eq_err_F3.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_eq_err_F3.png  used on input line 
 547.
 (pdftex.def)             Requested size: 263.188pt x 209.46255pt.
-<LagrangeHermit/Herm_eq_err_F3.png, id=267, 372.9132pt x 291.489pt>
+<LagrangeHermit/Herm_eq_err_F3.png, id=345, 372.9132pt x 291.489pt>
 File: LagrangeHermit/Herm_eq_err_F3.png Graphic file (type png)
 <use LagrangeHermit/Herm_eq_err_F3.png>
 Package pdftex.def Info: LagrangeHermit/Herm_eq_err_F3.png  used on input line 
@@ -2655,30 +2681,30 @@ Overfull \hbox (16.44803pt too wide) in paragraph at lines 546--556
 []$[]$  $[]$ 
  []
 
-<LagrangeHermit/Lagr_cheb_err_F3.png, id=268, 377.7312pt x 291.489pt>
+<LagrangeHermit/Lagr_cheb_err_F3.png, id=346, 370.986pt x 297.7524pt>
 File: LagrangeHermit/Lagr_cheb_err_F3.png Graphic file (type png)
 <use LagrangeHermit/Lagr_cheb_err_F3.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_cheb_err_F3.png  used on input lin
 e 558.
-(pdftex.def)             Requested size: 263.188pt x 203.10242pt.
-<LagrangeHermit/Herm_cheb_err_F3.png, id=269, 377.7312pt x 291.489pt>
+(pdftex.def)             Requested size: 263.188pt x 211.24211pt.
+<LagrangeHermit/Herm_cheb_err_F3.png, id=347, 370.986pt x 314.6154pt>
 File: LagrangeHermit/Herm_cheb_err_F3.png Graphic file (type png)
 <use LagrangeHermit/Herm_cheb_err_F3.png>
 Package pdftex.def Info: LagrangeHermit/Herm_cheb_err_F3.png  used on input lin
 e 564.
-(pdftex.def)             Requested size: 263.188pt x 203.10242pt.
+(pdftex.def)             Requested size: 263.188pt x 223.20566pt.
 
 Overfull \hbox (16.44803pt too wide) in paragraph at lines 557--568
 []$[]$  $[]$ 
  []
 
-<LagrangeHermit/Lagr_asin_err_F3.png, id=270, 372.9132pt x 296.7888pt>
+<LagrangeHermit/Lagr_asin_err_F3.png, id=348, 372.9132pt x 296.7888pt>
 File: LagrangeHermit/Lagr_asin_err_F3.png Graphic file (type png)
 <use LagrangeHermit/Lagr_asin_err_F3.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_asin_err_F3.png  used on input lin
 e 570.
 (pdftex.def)             Requested size: 263.188pt x 209.46255pt.
-<LagrangeHermit/Herm_asin_err_F3.png, id=271, 372.9132pt x 296.7888pt>
+<LagrangeHermit/Herm_asin_err_F3.png, id=349, 372.9132pt x 296.7888pt>
 File: LagrangeHermit/Herm_asin_err_F3.png Graphic file (type png)
 <use LagrangeHermit/Herm_asin_err_F3.png>
 Package pdftex.def Info: LagrangeHermit/Herm_asin_err_F3.png  used on input lin
@@ -2689,119 +2715,126 @@ Overfull \hbox (16.44803pt too wide) in paragraph at lines 569--580
 []$[]$  $[]$ 
  []
 
-[12 <./LagrangeHermit/Lagr_eq_err_F3.png (PNG copy)> <./LagrangeHermit/Herm_eq_
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Overfull \vbox (2.4842pt too high) has occurred while \output is active []
+
+
+[14 <./LagrangeHermit/Lagr_eq_err_F3.png (PNG copy)> <./LagrangeHermit/Herm_eq_
 err_F3.png (PNG copy)> <./LagrangeHermit/Lagr_cheb_err_F3.png (PNG copy)> <./La
 grangeHermit/Herm_cheb_err_F3.png (PNG copy)> <./LagrangeHermit/Lagr_asin_err_F
 3.png (PNG copy)> <./LagrangeHermit/Herm_asin_err_F3.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 583.
+(hyperref)                removing `math shift' on input line 584.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 583.
+(hyperref)                removing `\@ifnextchar' on input line 584.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 583.
+(hyperref)                removing `superscript' on input line 584.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 583.
+(hyperref)                removing `math shift' on input line 584.
 
-<LagrangeHermit/Lagr_Equi_F4_N10.png, id=277, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F4_N10.png, id=359, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F4_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F4_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F4_N10.png  used on input lin
-e 587.
+e 588.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Lagr_Cheb_F4_N10.png, id=278, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F4_N10.png, id=360, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F4_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F4_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F4_N10.png  used on input lin
-e 591.
+e 592.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Lagr_Asin_F4_N10.png, id=279, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F4_N10.png, id=361, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F4_N10.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F4_N10.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F4_N10.png  used on input lin
-e 595.
+e 596.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
 
-Overfull \hbox (10.52171pt too wide) in paragraph at lines 586--597
+Overfull \hbox (10.52171pt too wide) in paragraph at lines 587--598
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F4_N20.png, id=280, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F4_N20.png, id=362, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F4_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F4_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F4_N20.png  used on input lin
-e 599.
+e 600.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Lagr_Cheb_F4_N20.png, id=281, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F4_N20.png, id=363, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F4_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F4_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F4_N20.png  used on input lin
-e 603.
+e 604.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Lagr_Asin_F4_N20.png, id=282, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F4_N20.png, id=364, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F4_N20.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F4_N20.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F4_N20.png  used on input lin
-e 607.
+e 608.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
 
-Overfull \hbox (10.52171pt too wide) in paragraph at lines 598--609
+Overfull \hbox (10.52171pt too wide) in paragraph at lines 599--610
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F4_N40.png, id=283, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F4_N40.png, id=365, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F4_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F4_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F4_N40.png  used on input lin
-e 611.
+e 612.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Lagr_Cheb_F4_N40.png, id=284, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F4_N40.png, id=366, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F4_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F4_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F4_N40.png  used on input lin
-e 615.
+e 616.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Lagr_Asin_F4_N40.png, id=285, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Asin_F4_N40.png, id=367, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Asin_F4_N40.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F4_N40.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F4_N40.png  used on input lin
-e 619.
+e 620.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
 
-Overfull \hbox (10.52171pt too wide) in paragraph at lines 610--621
+Overfull \hbox (10.52171pt too wide) in paragraph at lines 611--622
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Lagr_Equi_F4_N80.png, id=286, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Equi_F4_N80.png, id=368, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Equi_F4_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Equi_F4_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Equi_F4_N80.png  used on input lin
-e 623.
+e 624.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Lagr_Cheb_F4_N80.png, id=287, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Lagr_Cheb_F4_N80.png, id=369, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Lagr_Cheb_F4_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Cheb_F4_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Cheb_F4_N80.png  used on input lin
-e 627.
+e 628.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Lagr_Asin_F4_N80.png, id=288, 363.2772pt x 317.988pt>
+<LagrangeHermit/Lagr_Asin_F4_N80.png, id=370, 363.2772pt x 317.988pt>
 File: LagrangeHermit/Lagr_Asin_F4_N80.png Graphic file (type png)
 <use LagrangeHermit/Lagr_Asin_F4_N80.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_Asin_F4_N80.png  used on input lin
-e 631.
+e 632.
 (pdftex.def)             Requested size: 178.96591pt x 156.65489pt.
 
-Overfull \hbox (10.52171pt too wide) in paragraph at lines 622--633
+Overfull \hbox (10.52171pt too wide) in paragraph at lines 623--634
 []$[]$$[]$$[]$ 
  []
 
-[13 <./LagrangeHermit/Lagr_Equi_F4_N10.png (PNG copy)> <./LagrangeHermit/Lagr_C
+[15 <./LagrangeHermit/Lagr_Equi_F4_N10.png (PNG copy)> <./LagrangeHermit/Lagr_C
 heb_F4_N10.png (PNG copy)> <./LagrangeHermit/Lagr_Asin_F4_N10.png (PNG copy)> <
 ./LagrangeHermit/Lagr_Equi_F4_N20.png (PNG copy)> <./LagrangeHermit/Lagr_Cheb_F
 4_N20.png (PNG copy)> <./LagrangeHermit/Lagr_Asin_F4_N20.png (PNG copy)> <./Lag
@@ -2809,99 +2842,99 @@ rangeHermit/Lagr_Equi_F4_N40.png (PNG copy)> <./LagrangeHermit/Lagr_Cheb_F4_N40
 .png (PNG copy)> <./LagrangeHermit/Lagr_Asin_F4_N40.png (PNG copy)> <./Lagrange
 Hermit/Lagr_Equi_F4_N80.png (PNG copy)> <./LagrangeHermit/Lagr_Cheb_F4_N80.png 
 (PNG copy)> <./LagrangeHermit/Lagr_Asin_F4_N80.png (PNG copy)>]
-<LagrangeHermit/Herm_Equi_F4_N5.png, id=295, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F4_N5.png, id=376, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F4_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F4_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F4_N5.png  used on input line
- 640.
+ 641.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Herm_Cheb_F4_N5.png, id=296, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F4_N5.png, id=377, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F4_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F4_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F4_N5.png  used on input line
- 644.
+ 645.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Herm_Asin_F4_N5.png, id=297, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F4_N5.png, id=378, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F4_N5.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F4_N5.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F4_N5.png  used on input line
- 648.
+ 649.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
 
-Overfull \hbox (10.52171pt too wide) in paragraph at lines 639--650
+Overfull \hbox (10.52171pt too wide) in paragraph at lines 640--651
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F4_N10.png, id=298, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F4_N10.png, id=379, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F4_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F4_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F4_N10.png  used on input lin
-e 652.
+e 653.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Herm_Cheb_F4_N10.png, id=299, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F4_N10.png, id=380, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F4_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F4_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F4_N10.png  used on input lin
-e 656.
+e 657.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Herm_Asin_F4_N10.png, id=300, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F4_N10.png, id=381, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F4_N10.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F4_N10.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F4_N10.png  used on input lin
-e 660.
+e 661.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
 
-Overfull \hbox (10.52171pt too wide) in paragraph at lines 651--662
+Overfull \hbox (10.52171pt too wide) in paragraph at lines 652--663
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F4_N20.png, id=301, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F4_N20.png, id=382, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F4_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F4_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F4_N20.png  used on input lin
-e 664.
+e 665.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Herm_Cheb_F4_N20.png, id=302, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F4_N20.png, id=383, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F4_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F4_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F4_N20.png  used on input lin
-e 668.
+e 669.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Herm_Asin_F4_N20.png, id=303, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F4_N20.png, id=384, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Asin_F4_N20.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F4_N20.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F4_N20.png  used on input lin
-e 672.
+e 673.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
 
-Overfull \hbox (10.52171pt too wide) in paragraph at lines 663--674
+Overfull \hbox (10.52171pt too wide) in paragraph at lines 664--675
 []$[]$$[]$$[]$ 
  []
 
-<LagrangeHermit/Herm_Equi_F4_N40.png, id=304, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Equi_F4_N40.png, id=385, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Equi_F4_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Equi_F4_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Equi_F4_N40.png  used on input lin
-e 676.
+e 677.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Herm_Cheb_F4_N40.png, id=305, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Cheb_F4_N40.png, id=386, 363.2772pt x 290.5254pt>
 File: LagrangeHermit/Herm_Cheb_F4_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Cheb_F4_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Cheb_F4_N40.png  used on input lin
-e 680.
+e 681.
 (pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
-<LagrangeHermit/Herm_Asin_F4_N40.png, id=306, 363.2772pt x 290.5254pt>
+<LagrangeHermit/Herm_Asin_F4_N40.png, id=387, 363.2772pt x 310.2792pt>
 File: LagrangeHermit/Herm_Asin_F4_N40.png Graphic file (type png)
 <use LagrangeHermit/Herm_Asin_F4_N40.png>
 Package pdftex.def Info: LagrangeHermit/Herm_Asin_F4_N40.png  used on input lin
-e 684.
-(pdftex.def)             Requested size: 178.96591pt x 143.12561pt.
+e 685.
+(pdftex.def)             Requested size: 178.96591pt x 152.8572pt.
 
-Overfull \hbox (10.52171pt too wide) in paragraph at lines 675--686
+Overfull \hbox (10.52171pt too wide) in paragraph at lines 676--687
 []$[]$$[]$$[]$ 
  []
 
-[14 <./LagrangeHermit/Herm_Equi_F4_N5.png (PNG copy)> <./LagrangeHermit/Herm_Ch
+[16 <./LagrangeHermit/Herm_Equi_F4_N5.png (PNG copy)> <./LagrangeHermit/Herm_Ch
 eb_F4_N5.png (PNG copy)> <./LagrangeHermit/Herm_Asin_F4_N5.png (PNG copy)> <./L
 agrangeHermit/Herm_Equi_F4_N10.png (PNG copy)> <./LagrangeHermit/Herm_Cheb_F4_N
 10.png (PNG copy)> <./LagrangeHermit/Herm_Asin_F4_N10.png (PNG copy)> <./Lagran
@@ -2909,77 +2942,113 @@ geHermit/Herm_Equi_F4_N20.png (PNG copy)> <./LagrangeHermit/Herm_Cheb_F4_N20.pn
 g (PNG copy)> <./LagrangeHermit/Herm_Asin_F4_N20.png (PNG copy)> <./LagrangeHer
 mit/Herm_Equi_F4_N40.png (PNG copy)> <./LagrangeHermit/Herm_Cheb_F4_N40.png (PN
 G copy)> <./LagrangeHermit/Herm_Asin_F4_N40.png (PNG copy)>]
-<LagrangeHermit/Lagr_eq_err_F4.png, id=312, 370.986pt x 296.7888pt>
+<LagrangeHermit/Lagr_eq_err_F4.png, id=393, 370.986pt x 296.7888pt>
 File: LagrangeHermit/Lagr_eq_err_F4.png Graphic file (type png)
 <use LagrangeHermit/Lagr_eq_err_F4.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_eq_err_F4.png  used on input line 
-693.
+694.
 (pdftex.def)             Requested size: 263.188pt x 210.55849pt.
-<LagrangeHermit/Herm_eq_err_F4.png, id=313, 373.395pt x 299.6796pt>
+<LagrangeHermit/Herm_eq_err_F4.png, id=394, 370.986pt x 296.307pt>
 File: LagrangeHermit/Herm_eq_err_F4.png Graphic file (type png)
 <use LagrangeHermit/Herm_eq_err_F4.png>
 Package pdftex.def Info: LagrangeHermit/Herm_eq_err_F4.png  used on input line 
-699.
-(pdftex.def)             Requested size: 263.188pt x 211.23755pt.
+700.
+(pdftex.def)             Requested size: 263.188pt x 210.21667pt.
 
-Overfull \hbox (16.44803pt too wide) in paragraph at lines 692--702
+Overfull \hbox (16.44803pt too wide) in paragraph at lines 693--703
 []$[]$  $[]$ 
  []
 
-<LagrangeHermit/Lagr_cheb_err_F4.png, id=314, 377.7312pt x 291.489pt>
+<LagrangeHermit/Lagr_cheb_err_F4.png, id=395, 370.986pt x 297.2706pt>
 File: LagrangeHermit/Lagr_cheb_err_F4.png Graphic file (type png)
 <use LagrangeHermit/Lagr_cheb_err_F4.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_cheb_err_F4.png  used on input lin
-e 704.
-(pdftex.def)             Requested size: 263.188pt x 203.10242pt.
-<LagrangeHermit/Herm_cheb_err_F4.png, id=315, 373.395pt x 299.6796pt>
+e 705.
+(pdftex.def)             Requested size: 263.188pt x 210.9003pt.
+<LagrangeHermit/Herm_cheb_err_F4.png, id=396, 370.986pt x 296.7888pt>
 File: LagrangeHermit/Herm_cheb_err_F4.png Graphic file (type png)
 <use LagrangeHermit/Herm_cheb_err_F4.png>
 Package pdftex.def Info: LagrangeHermit/Herm_cheb_err_F4.png  used on input lin
-e 710.
-(pdftex.def)             Requested size: 263.188pt x 211.23755pt.
+e 711.
+(pdftex.def)             Requested size: 263.188pt x 210.55849pt.
 
-Overfull \hbox (16.44803pt too wide) in paragraph at lines 703--714
+Overfull \hbox (16.44803pt too wide) in paragraph at lines 704--715
 []$[]$  $[]$ 
  []
 
-<LagrangeHermit/Lagr_asin_err_F4.png, id=316, 372.9132pt x 296.7888pt>
+<LagrangeHermit/Lagr_asin_err_F4.png, id=397, 372.9132pt x 296.7888pt>
 File: LagrangeHermit/Lagr_asin_err_F4.png Graphic file (type png)
 <use LagrangeHermit/Lagr_asin_err_F4.png>
 Package pdftex.def Info: LagrangeHermit/Lagr_asin_err_F4.png  used on input lin
-e 716.
+e 717.
 (pdftex.def)             Requested size: 263.188pt x 209.46255pt.
-<LagrangeHermit/Herm_asin_err_F4.png, id=317, 373.395pt x 299.6796pt>
+<LagrangeHermit/Herm_asin_err_F4.png, id=398, 372.9132pt x 296.7888pt>
 File: LagrangeHermit/Herm_asin_err_F4.png Graphic file (type png)
 <use LagrangeHermit/Herm_asin_err_F4.png>
 Package pdftex.def Info: LagrangeHermit/Herm_asin_err_F4.png  used on input lin
-e 722.
-(pdftex.def)             Requested size: 263.188pt x 211.23755pt.
+e 723.
+(pdftex.def)             Requested size: 263.188pt x 209.46255pt.
 
-Overfull \hbox (16.44803pt too wide) in paragraph at lines 715--726
+Overfull \hbox (16.44803pt too wide) in paragraph at lines 716--727
 []$[]$  $[]$ 
  []
 
-[15 <./LagrangeHermit/Lagr_eq_err_F4.png (PNG copy)> <./LagrangeHermit/Herm_eq_
-err_F4.png (PNG copy)> <./LagrangeHermit/Lagr_cheb_err_F4.png (PNG copy)> <./La
-grangeHermit/Herm_cheb_err_F4.png (PNG copy)> <./LagrangeHermit/Lagr_asin_err_F
-4.png (PNG copy)> <./LagrangeHermit/Herm_asin_err_F4.png (PNG copy)>]
-(Report.aux)
 
-Package rerunfilecheck Warning: File `Report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+Underfull \vbox (badness 1558) has occurred while \output is active []
 
-Package rerunfilecheck Info: Checksums for `Report.out':
-(rerunfilecheck)             Before: 4DCC7848E9E41D336AE94CE8C6FB0552;2519
-(rerunfilecheck)             After:  2929DC4D3A69971CC18276B03A8C699E;2483.
+ [17 <./LagrangeHermit/Lagr_eq_err_F4.png (PNG copy)> <./LagrangeHermit/Herm_eq
+_err_F4.png (PNG copy)> <./LagrangeHermit/Lagr_cheb_err_F4.png (PNG copy)> <./L
+agrangeHermit/Herm_cheb_err_F4.png (PNG copy)> <./LagrangeHermit/Lagr_asin_err_
+F4.png (PNG copy)> <./LagrangeHermit/Herm_asin_err_F4.png (PNG copy)>]
+<CubicSpline/cubic_spline_N8.png, id=405, 351.2322pt x 277.9986pt>
+File: CubicSpline/cubic_spline_N8.png Graphic file (type png)
+<use CubicSpline/cubic_spline_N8.png>
+Package pdftex.def Info: CubicSpline/cubic_spline_N8.png  used on input line 74
+8.
+(pdftex.def)             Requested size: 263.188pt x 208.31602pt.
+<CubicSpline/cubic_spline_N12.png, id=406, 351.2322pt x 277.9986pt>
+File: CubicSpline/cubic_spline_N12.png Graphic file (type png)
+<use CubicSpline/cubic_spline_N12.png>
+Package pdftex.def Info: CubicSpline/cubic_spline_N12.png  used on input line 7
+54.
+(pdftex.def)             Requested size: 263.188pt x 208.31602pt.
+
+Overfull \hbox (16.44803pt too wide) in paragraph at lines 747--757
+[]$[]$  $[]$ 
+ []
+
+<CubicSpline/cubic_spline_N16.png, id=407, 351.2322pt x 277.9986pt>
+File: CubicSpline/cubic_spline_N16.png Graphic file (type png)
+<use CubicSpline/cubic_spline_N16.png>
+Package pdftex.def Info: CubicSpline/cubic_spline_N16.png  used on input line 7
+59.
+(pdftex.def)             Requested size: 263.188pt x 208.31602pt.
+<CubicSpline/cubic_spline_N20.png, id=408, 351.2322pt x 277.9986pt>
+File: CubicSpline/cubic_spline_N20.png Graphic file (type png)
+<use CubicSpline/cubic_spline_N20.png>
+Package pdftex.def Info: CubicSpline/cubic_spline_N20.png  used on input line 7
+65.
+(pdftex.def)             Requested size: 263.188pt x 208.31602pt.
+
+Overfull \hbox (16.44803pt too wide) in paragraph at lines 758--768
+[]$[]$  $[]$ 
+ []
+
+
+Underfull \vbox (badness 1137) has occurred while \output is active []
+
+ [18 <./CubicSpline/cubic_spline_N8.png (PNG copy)> <./CubicSpline/cubic_spline
+_N12.png (PNG copy)> <./CubicSpline/cubic_spline_N16.png (PNG copy)> <./CubicSp
+line/cubic_spline_N20.png (PNG copy)>] [19] (Report.aux)
+Package rerunfilecheck Info: File `Report.out' has not changed.
+(rerunfilecheck)             Checksum: 1DDFB215169110792F84ECFAC619ACE4;4824.
  ) 
 Here is how much of TeX's memory you used:
- 39279 strings out of 479334
- 862445 string characters out of 2857084
- 1325914 words of memory out of 3000000
- 55699 multiletter control sequences out of 15000+200000
- 426479 words of font info for 124 fonts, out of 3000000 for 9000
+ 39537 strings out of 479334
+ 871440 string characters out of 2857084
+ 1322983 words of memory out of 3000000
+ 55914 multiletter control sequences out of 15000+200000
+ 428607 words of font info for 137 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,8n,91p,1064b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
@@ -2988,28 +3057,30 @@ fonts/cm/cmex10.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmmi10.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mail4/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mail4/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mail4/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mail4/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/
-mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
-/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-cm-super/sfbx0900.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/cm-super/sfbx1000.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/cm-super/sfbx1200.pfb><C:/Users/mail4/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/mail4/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/mail4/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx2074.pfb><C:/Users/mail4/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc1728.pfb><C:/Users
-/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb><
-C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm10
-00.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-supe
-r/sfrm1440.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/cm-super/sfxc1440.pfb>
-Output written on Report.pdf (15 pages, 3357790 bytes).
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/mail4/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mail4/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users
+/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C
+:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7
+.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmr9.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmsy7.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/font
+s/type1/public/cm-super/sfbx0900.pfb><C:/Users/mail4/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/cm-super/sfbx1000.pfb><C:/Users/mail4/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/mail4/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/mail4/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/
+mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx2074.pfb><C
+:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc172
+8.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super
+/sfrm0900.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+cm-super/sfrm1000.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/cm-super/sfrm1440.pfb><C:/Users/mail4/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/cm-super/sfxc1440.pfb>
+Output written on Report.pdf (20 pages, 3551617 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 56 named destinations out of 1000 (max. 500000)
- 41729 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 514 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 43909 words of extra memory for PDF output out of 51595 (max. 10000000)
 

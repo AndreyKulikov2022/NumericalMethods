@@ -1,4 +1,4 @@
-Export=true;
+Export=false;
 n=1000;
 N=[8,12,16,20];
 for i=1:length(N)

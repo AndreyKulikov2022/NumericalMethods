@@ -1,4 +1,4 @@
-Export=true;
+Export=false;
 
 syms x;
 df = diff(1/((x-1)^2 + 0.002) + 1/((x-0.2)^2 + 0.005) - 5);
